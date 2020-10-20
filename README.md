@@ -1,14 +1,11 @@
-# Foobar
+# World Data Viz 2020
 
-Foobar is a Python library for dealing with word pluralization.
+Participació al concurs de World Data Viz Challenge 2020
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Baixar el projecte (amb git o Github Desktop preferiblement) i visualitzar l'index.html al navegador.
 
-```bash
-pip install foobar
-```
 
 ## Usage
 
