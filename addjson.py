@@ -1,6 +1,6 @@
 import json
 import csv
-
+#Open json file for reading
 with open('barris.geojson', 'r') as f:
     data = json.load(f)
 
@@ -24,12 +24,6 @@ with open('2020_Pes_del_atur_registrat_sobre_poblacio_16_64_anys.csv', 'r') as c
 			pesaturdict[int(row[4])].append(float(row[7]))
 			
 		line_count += 1
-
-	print(pesaturdict)
-
-	print(poblaciodict)
-
-
 
 #Loop over GeoJSON features and add the new properties
 codi_barri = 1
