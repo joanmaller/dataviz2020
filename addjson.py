@@ -13,10 +13,10 @@ with open('2020_Pes_del_atur_registrat_sobre_poblacio_16_64_anys.csv', 'r') as c
 
 		if line_count == 0:
 			pass
-		elif row[2] == 1:
+		elif int(row[1]) == 1 :
 			pesaturdict[int(row[4])] = [float(row[7])]
 			poblaciodict[int(row[4])] = int(row[6])
-			# row[2] mes
+			# row[1] mes
 			# row[4] codi Barri
 			# row[6] població
 			# row[7] pes atur
