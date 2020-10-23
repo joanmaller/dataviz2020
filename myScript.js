@@ -1,8 +1,12 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoiam9hbm1hbGxlciIsImEiOiJja2doYWt6MnAwMXZ6MnRxa3AycXJwNWtxIn0.l6RbufRk2cbYgd0rhiYwJQ';
+mapboxgl.accessToken = 'pk.eyJ1IjoiamF1bWVwIiwiYSI6ImNrZ2wwY3dqdjAwd3cycmw4dHNwdnAzbHIifQ.rthttt-mtWvDX8f0R1O49w';
 
 var map = new mapboxgl.Map({
   container: 'map', // container id
-  style: 'your-style-url' // replace this with your style URL
+  style: 'mapbox://styles/jaumep/ckgl0etv12e9j19mpedc5gt2l', // replace this with your style URL
+  center: [2.16, 41.38], // centre [lon,lat]
+  zoom : 12
+
+
 });
 
 map.on('load', function() {
