@@ -13,11 +13,8 @@ with open('2020_Pes_del_atur_registrat_sobre_poblacio_16_64_anys.csv', 'r') as c
 
 		if line_count == 0:
 			pass
-		elif line_count < 75:
-			pesaturdict[int(row[4])] = []
-			print(float(row[7]))
-			pesaturdict[int(row[4])].append(float(row[7]))
-			print(pesaturdict[0])
+		elif line_count < 74:
+			pesaturdict[int(row[4])] = [float(row[7])]
 			poblaciodict[int(row[4])] = int(row[6])
 			# row[2] mes
 			# row[4] codi Barri
@@ -43,6 +40,6 @@ for feat in data['features']:
 	codi_barri += 1
 
 #Write result to a new file
-with open('newbarris.geojson', 'w') as f:
+with open('barris_pesatur.geojson', 'w') as f:
     json.dump(data, f)
 
