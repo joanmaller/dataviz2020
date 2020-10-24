@@ -8,13 +8,11 @@ Baixar el projecte (amb git o Github Desktop preferiblement) i visualitzar l'ind
 
 
 ## Usage
+Per executar l'script d'addjsonpoints.py:
+```bash
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+pip3 install geojson
+pip3 install osgeo
 ```
 
 ## Contributing
