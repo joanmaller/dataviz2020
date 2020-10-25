@@ -38,7 +38,7 @@ with open('2020_Durada_atur.csv', 'r') as csv_file:
 	feature_barris = {}
 	line_count = 0
 	for row in csv_reader:
-		if (line_count != 0 and inv_dictduracions[row[6]] == 2):
+		if (line_count != 0 and inv_dictduracions[row[6]] == 1):
 
 			num_barri = int(row[4])
 			num_mes = int(row[1])
@@ -65,13 +65,13 @@ with open('2020_Durada_atur.csv', 'r') as csv_file:
 					        if point.Within(polygon):
 					            feature_barris[num_barri]["geometry"]["coordinates"].append([point.GetX(),point.GetY()])
 					            counter += 1
-					feat = feature_barris[num_barri]
+					feat = copy.deepcopy(feature_barris[num_barri])
 					
 					coordenades = feature_barris[num_barri]["geometry"]["coordinates"]
 					
 				else:
 	
-					feat = feature_barris[num_barri]
+					feat = copy.deepcopy(feature_barris[num_barri])
 					coordenades = feature_barris[num_barri]["geometry"]["coordinates"]
 					#Si el num nou d'aturats es més baix seleccionar una part dels aturats màxims
 
@@ -103,6 +103,6 @@ with open('2020_Durada_atur.csv', 'r') as csv_file:
 		line_count += 1
 
 #Write result to a new file
-with open('points_duracioatur2.geojson', 'w') as n2f:
+with open('points_duracioatur1.geojson', 'w') as n2f:
     json.dump(newdata, n2f)
 
