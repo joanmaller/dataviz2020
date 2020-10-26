@@ -10,12 +10,13 @@ from osgeo import ogr
 with open('barris.geojson', 'r') as f:
     data = json.load(f)
 
-poligonsbarris = []
+poligonsbarris = {}
 for feature in data['features']:
         geom = feature['geometry']
         geom = json.dumps(geom)
-        # Poligon del barri 1 serà guardat a pos 0 de poligonsbarris
-        poligonsbarris.append(ogr.CreateGeometryFromJson(geom)) 
+        
+        poligonsbarris[int(feature["properties"]["BARRI"])] = ogr.CreateGeometryFromJson(geom)
+
 
 
 
@@ -38,18 +39,20 @@ with open('2020_Durada_atur.csv', 'r') as csv_file:
 	feature_barris = {}
 	line_count = 0
 	for row in csv_reader:
-		if (line_count != 0 and inv_dictduracions[row[6]] == 1):
+		if (line_count != 0 and inv_dictduracions[row[6]] == 2):
 
 			num_barri = int(row[4])
 			num_mes = int(row[1])
-			print(num_barri ,"  " , num_mes)
+			print("Barri-",num_barri ,"  Mes-" , num_mes)
 
 			if num_barri != 99 and num_barri != "Codi_Barri": #Codi de barri diferent de no consta
 				
-				polygon = poligonsbarris[num_barri -1]
+				polygon = poligonsbarris[num_barri]
+				print
 				env = polygon.GetEnvelope()
 				xmin, ymin, xmax, ymax = env[0],env[2],env[1],env[3]
 				num_aturats = int(row[7])
+				print("Row 7: ", num_aturats)
 
 				if num_mes == 1:
 					aturats_barri[num_barri] = num_aturats
@@ -96,13 +99,14 @@ with open('2020_Durada_atur.csv', 'r') as csv_file:
 
 				feat["geometry"]["coordinates"] = coordenades
 				feat["properties"]["Mes"] = num_mes
-				print(len(feature_barris[num_barri]["geometry"]["coordinates"]))
+				#print(len(feature_barris[num_barri]["geometry"]["coordinates"]))
+				print("Punts afegits: ", len(feat["geometry"]["coordinates"]))
 				newdata['features'].append(feat)
 
 
 		line_count += 1
 
 #Write result to a new file
-with open('points_duracioatur1.geojson', 'w') as n2f:
+with open('points_duracioatur2.geojson', 'w') as n2f:
     json.dump(newdata, n2f)
 
