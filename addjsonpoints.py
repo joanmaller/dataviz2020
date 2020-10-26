@@ -99,10 +99,10 @@ with open('2020_Durada_atur.csv', 'r') as csv_file:
 
 				feat["geometry"]["coordinates"] = coordenades
 				feat["properties"]["Mes"] = num_mes
-				#print(len(feature_barris[num_barri]["geometry"]["coordinates"]))
+				print(len(coordenades))
 				print("Punts afegits: ", len(feat["geometry"]["coordinates"]))
-				newdata['features'].append(feat)
-
+				
+				newdata['features'].append(copy.deepcopy(feat))
 
 		line_count += 1
 
