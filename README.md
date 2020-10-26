@@ -19,10 +19,10 @@ Fitxer necessaris: styles.css, myScript.js, points_duracioatur0.geojson, points_
 
 ## Usage addjsonpoints.py
 Per executar l'script d'addjsonpoints.py cal instal·lar les llibreries GDAL i el mòdul osgeo per python
-'''bash
+```bash
 pip3 install osgeo
 
-'''
+```
 ## Misc
 També hi han les dades barris_pesatur.geojson, que son els barris de barcelona situats com a tiles al geojson amb una densitat agafada de les Dades del pes d'atur de 16 a 64 anys, per a graficar com a choropleth.
 
