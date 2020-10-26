@@ -63,7 +63,7 @@ map.on('load', function() {
     paint: {
       'circle-radius': 3,
       'circle-color': '#0000FF',
-      'circle-opacity': 0.15
+      'circle-opacity': 0.20
     }
   });
   
