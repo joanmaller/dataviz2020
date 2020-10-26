@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<title>Atur Barcelona</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div id='map'></div>
+	<div id='console'>
+	    <button class="collapsible"> Durada de l'atur a Barcelona</button>
+		<div id="content">
+    		<p>Cada punt representa un aturat registrat a Barcelona. Localitzat en una posició aleatòria dintre dels límits del barri, per representar la densitat d'aturats de cada barri. Tres colors per visualitzar quant temps porta cada persona en atur. </p>
+    		<p>Dades: <a href='https://opendata-ajuntament.barcelona.cat/data/es/dataset/est-atur-durada/resource/043fd676-5e9a-4599-b3f8-bb0825debcab'>  Durada de l'atur registrat a Barcelona </a>Gener-Setembre 2020</p>
+    		<p>Feu lliscar la barra de temps per controlar l'evolució de l'atur.</p>
+        </div>
+
+		<!-- Time Slide Bar -->
+		<div class='session' id='sliderbar'>
+		    
+		  <h2>Mes: <label id='active-month'>Gener</label></h2>
+		  <input id='slider' class='row' type='range' min='1' max='9' step='1' value='1' />
+		</div>
+		
+
+
+		<!-- Filtre per durada -->
+		<div class='session'>
+		  <h2>Selecció per durada</h2>
+		  
+		  <div class='row' id='filters'>
+
+			<div class='row' id='filter0'>
+			  	<span class="dot0"></span> 
+	 		  	<input id='durada0' type='checkbox' name='toggle' value='durada0' checked='checked'>
+		    	<label for='durada0'>Fins a 6 mesos</label>
+		  	</div>
+		  	<div class='row' id='filter1'>
+		  	    <span class="dot1"></span> 
+		  		<input id='durada1' type='checkbox' name='toggle' value='durada1' checked='checked'>
+		    	<label for='durada1'>De 6 a 12 mesos</label>
+		  	</div>
+		  	<div class='row' id='filter2'>
+		  	    <span class="dot2"></span> 
+		  		<input id='durada2' type='checkbox' name='toggle' value='durada2' checked='checked'>
+		    	<label for='durada2'>Més de 12 mesos</label>
+		  	</div>
+		  </div>
+		</div>
+		
+
+	</div>
+
+	<script src="myScript.js"></script>
+</body>
+</html>
