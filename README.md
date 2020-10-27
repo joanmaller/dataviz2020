@@ -1,7 +1,7 @@
 # World Data Viz 2020
 
 Participació al concurs de World Data Viz Challenge 2020. 
-Veient el repositori de datasets de OpenData, vam decidir que seria interessant com l'atur havia evolucionat a Barcelona en els últims mesos, per això seria interessant creuar les dades de l'atur per barris amb les geogràfiques dels propis barris de Barcelona. Així aconseguint un núvol de densitats d'aturats.
+Veient el repositori de datasets de OpenData, vam decidir que seria interessant com l'atur havia evolucionat a Barcelona en els últims mesos, creuant les dades de l'atur per barris amb les geogràfiques dels propis barris de Barcelona. Aconseguint així, un núvol de densitats d'aturats.
 Al veure que també hi havia informació sobre la durada de l'atur, vam pensar en el color, una altra manera de visualitzar dades.
 
 Una visualització en l'espai 2d de barcelona, en que també tenim el control del temps i de les capes de color per veure l'evolució de l'atur i fer l'anàlisi nosaltres a partir de la propia viz.
