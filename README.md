@@ -1,3 +1,5 @@
+![alt text](https://github.com/joanmaller/dataviz2020/blob/master/AturMapBcn.png?raw=true)
+
 # World Data Viz 2020
 
 Participació al concurs de World Data Viz Challenge 2020. 
