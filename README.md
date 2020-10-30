@@ -27,7 +27,7 @@ pip3 install osgeo
 També hi han les dades barris_pesatur.geojson, que son els barris de barcelona situats com a tiles al geojson amb una densitat agafada de les Dades del pes d'atur de 16 a 64 anys, per a graficar com a choropleth.
 
 ## Contributing
-Ens ha semblat necessari penjar també tots els documents de la web, scripts de Python i fitxer geoJson creats en un repositori públic per fer-ho accessible a tothom, que ho vulgui consultar, modificar i replicar. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. 
+Ens ha semblat necessari penjar tots els documents de la web, scripts de Python i fitxer geoJson creats en un repositori públic per fer-ho accessible a tothom, que ho vulgui consultar, modificar i replicar. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. 
 
 
 
